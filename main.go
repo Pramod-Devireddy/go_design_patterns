@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"go_design_patterns/FactoryPattern"
+	"go_design_patterns/SingletonPattern"
 )
 
 func main() {
@@ -16,5 +17,15 @@ func main() {
 
 	triangle := FactoryPattern.NewShape("triangle", 10, 20) // creates a new Triangle with base 10 and height 20
 	fmt.Println(triangle.Area())                            // prints 100
+
+	// Singleton Pattern
+	s1 := SingletonPattern.GetInstance()
+	s2 := SingletonPattern.GetInstance()
+
+	if s1 == s2 {
+		fmt.Println("s1 and s2 are the same instance")
+	} else {
+		fmt.Println("s1 and s2 are different instances")
+	}
 
 }

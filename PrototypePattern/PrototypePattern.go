@@ -7,12 +7,12 @@ type Prototype interface {
 
 // Declare a struct for the object to be created
 type ConcretePrototype struct {
-	name string
+	Name string
 }
 
 // Implement the Clone method for the ConcretePrototype struct
 func (cp *ConcretePrototype) Clone() Prototype {
 	return &ConcretePrototype{
-		name: cp.name,
+		Name: cp.Name,
 	}
 }

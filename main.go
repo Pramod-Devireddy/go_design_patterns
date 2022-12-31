@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"go_design_patterns/BuilderPattern"
 	"go_design_patterns/FactoryPattern"
+	"go_design_patterns/PrototypePattern"
 	"go_design_patterns/SingletonPattern"
 )
 
@@ -44,4 +45,18 @@ func main() {
 
 	fmt.Println(product1)
 	fmt.Println(product2)
+
+	// Prototype Pattern
+
+	// Create an instance of the ConcretePrototype struct
+	original := &PrototypePattern.ConcretePrototype{
+		Name: "Prototype 1",
+	}
+
+	// Use the Clone method to create a copy of the original object
+	copy := original.Clone()
+
+	// Print the name of the original and copy objects
+	fmt.Println("Original name:", original.Name)
+	fmt.Println("Copy name:", copy.(*PrototypePattern.ConcretePrototype).Name)
 }

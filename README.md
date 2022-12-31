@@ -32,3 +32,4 @@
 
 16. **State pattern:** This pattern enables an object to alter its behavior when its internal state changes.
 
+17. **Strategy pattern:** This pattern enables you to select an algorithm at runtime by encapsulating each algorithm as an object.

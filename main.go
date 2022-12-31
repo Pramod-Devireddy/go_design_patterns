@@ -9,6 +9,7 @@ import (
 	"go_design_patterns/ObserverPattern"
 	"go_design_patterns/PrototypePattern"
 	"go_design_patterns/SingletonPattern"
+	"go_design_patterns/TemplatePattern"
 )
 
 func main() {
@@ -104,4 +105,14 @@ func main() {
 
 	// Set the state of the subject again and send a notification to the remaining observer.
 	subject.SetState("state 2")
+
+	// Template Pattern
+
+	cricket := TemplatePattern.Cricket{}
+	cricket.Play()
+
+	fmt.Println()
+
+	football := TemplatePattern.Football{}
+	football.Play()
 }

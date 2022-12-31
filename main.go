@@ -15,6 +15,8 @@ import (
 func main() {
 
 	// Factory Pattern
+	fmt.Println("======== Factory Pattern Demo ========")
+
 	rect := FactoryPattern.NewShape("rectangle", 10, 20) // creates a new Rectangle with width 10 and height 20
 	fmt.Println(rect.Area())                             // prints 200
 
@@ -25,6 +27,8 @@ func main() {
 	fmt.Println(triangle.Area())                            // prints 100
 
 	// Singleton Pattern
+	fmt.Println("======== Singleton Pattern Demo ========")
+
 	s1 := SingletonPattern.GetInstance()
 	s2 := SingletonPattern.GetInstance()
 
@@ -35,6 +39,8 @@ func main() {
 	}
 
 	// Builder Pattern
+	fmt.Println("======== Builder Pattern Demo ========")
+
 	director := &BuilderPattern.Director{}
 	builder1 := &BuilderPattern.ConcreteBuilder1{}
 	builder2 := &BuilderPattern.ConcreteBuilder2{}
@@ -51,6 +57,7 @@ func main() {
 	fmt.Println(product2)
 
 	// Prototype Pattern
+	fmt.Println("======== Prototype Pattern Demo ========")
 
 	// Create an instance of the ConcretePrototype struct
 	original := &PrototypePattern.ConcretePrototype{
@@ -65,6 +72,8 @@ func main() {
 	fmt.Println("Copy name:", copy.(*PrototypePattern.ConcretePrototype).Name)
 
 	// Adapter Pattern
+	fmt.Println("======== Adapter Pattern Demo ========")
+
 	client := AdapterPattern.Client{}
 
 	adaptee := AdapterPattern.Adaptee{}
@@ -74,6 +83,7 @@ func main() {
 	fmt.Println(client.DoRequest())
 
 	// Decorator Pattern
+	fmt.Println("======== Decorator Pattern Demo ========")
 
 	// Create a new Circle object
 	circleObj := &DecoratorPattern.Circle{}
@@ -87,6 +97,7 @@ func main() {
 	redShapeDecorator.SetRedBorder()
 
 	// Observer Pattern
+	fmt.Println("======== Observer Pattern Demo ========")
 
 	// Create a subject and two observers.
 	subject := &ObserverPattern.ConcreteSubject{}
@@ -107,6 +118,7 @@ func main() {
 	subject.SetState("state 2")
 
 	// Template Pattern
+	fmt.Println("======== Template Pattern Demo ========")
 
 	cricket := TemplatePattern.Cricket{}
 	cricket.Play()

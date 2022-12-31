@@ -21,3 +21,6 @@
 10. **Command pattern:** This pattern involves encapsulating a request as an object, which enables you to parametrize clients with different requests, queue or log requests, and support undoable operations.
 
 11. **Facade pattern:** This pattern provides a simplified interface to a complex system. It hides the complexity of the system and provides a higher-level interface to the client.
+
+12. **Flyweight pattern:** This pattern reduces the cost of creating and manipulating a large number of similar objects by sharing them.
+

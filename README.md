@@ -24,3 +24,4 @@
 
 12. **Flyweight pattern:** This pattern reduces the cost of creating and manipulating a large number of similar objects by sharing them.
 
+13. **Iterator pattern:** This pattern enables you to access the elements of an aggregate object sequentially without exposing its underlying representation.

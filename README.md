@@ -8,3 +8,4 @@
 6. **Decorator pattern:** This pattern allows additional behavior to be added to an existing object dynamically, by wrapping the object in a decorator class.
 7. **Observer pattern:** This pattern allows objects to observe events happening in other objects, and respond accordingly.
 8. **Template pattern:** This pattern defines the steps of an algorithm, but allows subclasses to provide the implementation for one or more steps.
+9. **Generator Pattern:** The generator pattern is a design pattern in which a generator function is used to generate a sequence of values, one at a time, on demand.

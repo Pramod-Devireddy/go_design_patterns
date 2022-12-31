@@ -28,3 +28,4 @@
 
 14. **Mediator pattern:** This pattern defines an object that mediates communication between other objects, thereby reducing the dependencies between them.
 
+15. **Memento pattern:** This pattern enables you to capture and restore the internal state of an object without violating its encapsulation.

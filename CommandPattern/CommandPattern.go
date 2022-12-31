@@ -10,23 +10,23 @@ type Command interface {
 // ConcreteCommandA is a concrete implementation of the Command interface.
 // It has a reference to a Receiver object, which it passes the command to.
 type ConcreteCommandA struct {
-	receiver *Receiver
+	Receiver *Receiver
 }
 
 // Execute is the method defined by the Command interface. It calls a method on the Receiver object.
 func (c *ConcreteCommandA) Execute() {
-	c.receiver.ActionA()
+	c.Receiver.ActionA()
 }
 
 // ConcreteCommandB is another concrete implementation of the Command interface.
 // It also has a reference to a Receiver object, which it passes the command to.
 type ConcreteCommandB struct {
-	receiver *Receiver
+	Receiver *Receiver
 }
 
 // Execute is the method defined by the Command interface. It calls a different method on the Receiver object.
 func (c *ConcreteCommandB) Execute() {
-	c.receiver.ActionB()
+	c.Receiver.ActionB()
 }
 
 // Invoker is the object that initiates the command. It has a reference to a Command object.

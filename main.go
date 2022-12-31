@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"go_design_patterns/AdapterPattern"
 	"go_design_patterns/BuilderPattern"
+	"go_design_patterns/CommandPattern"
 	"go_design_patterns/DecoratorPattern"
 	"go_design_patterns/FactoryPattern"
 	"go_design_patterns/GeneratorPattern"
@@ -139,4 +140,29 @@ func main() {
 	for i := 0; i < 10; i++ {
 		fmt.Println(<-gen)
 	}
+
+	// Command Pattern
+	fmt.Println("======== Command Pattern Demo ========")
+
+	// Create a Receiver object.
+	receiver := &CommandPattern.Receiver{}
+
+	// Create a ConcreteCommandA object and pass it the Receiver object.
+	commandA := &CommandPattern.ConcreteCommandA{Receiver: receiver}
+
+	// Create a ConcreteCommandB object and pass it the Receiver object.
+	commandB := &CommandPattern.ConcreteCommandB{Receiver: receiver}
+
+	// Create an Invoker object and set its Command object to the ConcreteCommandA object.
+	invoker := &CommandPattern.Invoker{}
+	invoker.SetCommand(commandA)
+
+	// Execute the Command object's Execute method through the Invoker.
+	invoker.ExecuteCommand()
+
+	// Set the Invoker's Command object to the ConcreteCommandB object.
+	invoker.SetCommand(commandB)
+
+	// Execute the Command object's Execute method through the Invoker.
+	invoker.ExecuteCommand()
 }

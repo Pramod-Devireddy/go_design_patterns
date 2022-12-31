@@ -33,3 +33,5 @@
 16. **State pattern:** This pattern enables an object to alter its behavior when its internal state changes.
 
 17. **Strategy pattern:** This pattern enables you to select an algorithm at runtime by encapsulating each algorithm as an object.
+
+18. **Visitor pattern:** This pattern separates an algorithm from an object structure by moving the algorithm to a separate class. This enables you to add new operations to existing object structures without changing the structures themselves.

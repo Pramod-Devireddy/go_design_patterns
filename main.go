@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"go_design_patterns/AdapterPattern"
 	"go_design_patterns/BuilderPattern"
+	"go_design_patterns/DecoratorPattern"
 	"go_design_patterns/FactoryPattern"
 	"go_design_patterns/PrototypePattern"
 	"go_design_patterns/SingletonPattern"
@@ -69,4 +70,17 @@ func main() {
 
 	client.SetTarget(&adapter)
 	fmt.Println(client.DoRequest())
+
+	// Decorator Pattern
+
+	// Create a new Circle object
+	circleObj := &DecoratorPattern.Circle{}
+
+	// Create a new RedShapeDecorator object that wraps the Circle object
+	redShapeDecorator := &DecoratorPattern.RedShapeDecorator{Decorator: &DecoratorPattern.Decorator{Shape: circleObj}}
+
+	// Call the Draw method of the RedShapeDecorator object,
+	// which in turn calls the Draw method of the wrapped Circle object and adds the red border to it
+	redShapeDecorator.Draw()
+	redShapeDecorator.SetRedBorder()
 }

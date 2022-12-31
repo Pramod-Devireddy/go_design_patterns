@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"go_design_patterns/AdapterPattern"
 	"go_design_patterns/BuilderPattern"
 	"go_design_patterns/FactoryPattern"
 	"go_design_patterns/PrototypePattern"
@@ -59,4 +60,13 @@ func main() {
 	// Print the name of the original and copy objects
 	fmt.Println("Original name:", original.Name)
 	fmt.Println("Copy name:", copy.(*PrototypePattern.ConcretePrototype).Name)
+
+	// Adapter Pattern
+	client := AdapterPattern.Client{}
+
+	adaptee := AdapterPattern.Adaptee{}
+	adapter := AdapterPattern.Adapter{AdapteeObj: &adaptee}
+
+	client.SetTarget(&adapter)
+	fmt.Println(client.DoRequest())
 }

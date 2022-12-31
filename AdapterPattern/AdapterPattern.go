@@ -35,9 +35,9 @@ func (a *Adaptee) SpecificRequest() string {
 
 // Adapter is the object that adapts the Adaptee to the Target interface.
 type Adapter struct {
-	adaptee *Adaptee
+	AdapteeObj *Adaptee
 }
 
 func (a *Adapter) Request() string {
-	return a.adaptee.SpecificRequest()
+	return a.AdapteeObj.SpecificRequest()
 }

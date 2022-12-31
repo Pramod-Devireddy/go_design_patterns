@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"go_design_patterns/BuilderPattern"
 	"go_design_patterns/FactoryPattern"
 	"go_design_patterns/SingletonPattern"
 )
@@ -28,4 +29,19 @@ func main() {
 		fmt.Println("s1 and s2 are different instances")
 	}
 
+	// Builder Pattern
+	director := &BuilderPattern.Director{}
+	builder1 := &BuilderPattern.ConcreteBuilder1{}
+	builder2 := &BuilderPattern.ConcreteBuilder2{}
+
+	director.SetBuilder(builder1)
+	director.Construct()
+	product1 := builder1.GetResult()
+
+	director.SetBuilder(builder2)
+	director.Construct()
+	product2 := builder2.GetResult()
+
+	fmt.Println(product1)
+	fmt.Println(product2)
 }

@@ -6,3 +6,4 @@
 4. **Prototype pattern:** This pattern creates new objects by copying existing objects, rather than creating new objects from scratch.
 5. **Adapter pattern:** This pattern allows classes with incompatible interfaces to work together by wrapping their own interface around that of an already existing class.
 6. **Decorator pattern:** This pattern allows additional behavior to be added to an existing object dynamically, by wrapping the object in a decorator class.
+7. **Observer pattern:** This pattern allows objects to observe events happening in other objects, and respond accordingly.

@@ -6,6 +6,7 @@ import (
 	"go_design_patterns/BuilderPattern"
 	"go_design_patterns/DecoratorPattern"
 	"go_design_patterns/FactoryPattern"
+	"go_design_patterns/ObserverPattern"
 	"go_design_patterns/PrototypePattern"
 	"go_design_patterns/SingletonPattern"
 )
@@ -83,4 +84,24 @@ func main() {
 	// which in turn calls the Draw method of the wrapped Circle object and adds the red border to it
 	redShapeDecorator.Draw()
 	redShapeDecorator.SetRedBorder()
+
+	// Observer Pattern
+
+	// Create a subject and two observers.
+	subject := &ObserverPattern.ConcreteSubject{}
+	observer1 := &ObserverPattern.ConcreteObserver{SubjectObj: subject}
+	observer2 := &ObserverPattern.ConcreteObserver{SubjectObj: subject}
+
+	// Attach the observers to the subject.
+	subject.Attach(observer1)
+	subject.Attach(observer2)
+
+	// Set the state of the subject and send a notification to the observers.
+	subject.SetState("state 1")
+
+	// Detach one of the observers from the subject.
+	subject.Detach(observer2)
+
+	// Set the state of the subject again and send a notification to the remaining observer.
+	subject.SetState("state 2")
 }
